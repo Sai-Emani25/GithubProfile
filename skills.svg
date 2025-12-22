@@ -1,38 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="800" height="160">
 	<defs>
 		<style>
 			.skill-grid { 
 				display: grid; 
-				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+				grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
 				gap: 20px; 
-				padding: 20px; 
-				font-family: 'Segoe UI', sans-serif;
+				padding: 25px; 
+				font-family: 'Segoe UI', sans-serif; 
 			}
 			.skill-card {
-				background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(255,107,53,0.1));
-				border: 2px solid rgba(0,255,136,0.3);
-				border-radius: 12px;
-				padding: 15px;
+				background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(255,107,53,0.15));
+				border: 2px solid rgba(0,255,136,0.4); 
+				border-radius: 16px; 
+				padding: 20px; 
 				text-align: center;
-				animation: float 3s ease-in-out infinite;
-				transform-origin: center;
+				animation: float 4s ease-in-out infinite; 
+				cursor: pointer; 
+				transition: all 0.3s ease;
 			}
-			.skill-icon { font-size: 32px; display: block; margin-bottom: 8px; }
-			.skill-name { font-size: 16px; font-weight: 600; color: #00ff88; }
+			.skill-card:hover { 
+				transform: scale(1.05); 
+				border-color: #00ff88; 
+				box-shadow: 0 8px 25px rgba(0,255,136,0.4); 
+			}
+			.skill-icon { 
+				font-size: 36px; 
+				display: block; 
+				margin-bottom: 10px; 
+			}
+			.skill-name { 
+				font-size: 16px; 
+				font-weight: 700; 
+				color: #00ff88; 
+			}
 			@keyframes float {
 				0%, 100% { transform: translateY(0px); }
-				50% { transform: translateY(-8px); }
+				50% { transform: translateY(-10px); }
 			}
 			.skill-card:nth-child(1) { animation-delay: 0s; }
-			.skill-card:nth-child(2) { animation-delay: 0.3s; }
-			.skill-card:nth-child(3) { animation-delay: 0.6s; }
-			.skill-card:nth-child(4) { animation-delay: 0.9s; }
-			.skill-card:nth-child(5) { animation-delay: 1.2s; }
-			.skill-card:nth-child(6) { animation-delay: 1.5s; }
+			.skill-card:nth-child(2) { animation-delay: 0.4s; }
+			.skill-card:nth-child(3) { animation-delay: 0.8s; }
+			.skill-card:nth-child(4) { animation-delay: 1.2s; }
+			.skill-card:nth-child(5) { animation-delay: 1.6s; }
+			.skill-card:nth-child(6) { animation-delay: 2s; }
+			.skill-card:nth-child(7) { animation-delay: 2.4s; }
+			.skill-card:nth-child(8) { animation-delay: 2.8s; }
 		</style>
 	</defs>
-	<rect width="800" height="120" fill="#0f0f2a" rx="12"/>
-	<foreignObject x="0" y="0" width="800" height="120">
+	<rect width="800" height="160" fill="#0f0f2a" rx="20"/>
+	<foreignObject x="0" y="0" width="800" height="160">
 		<div class="skill-grid">
 			<div class="skill-card">
 				<span class="skill-icon">🐳</span>
@@ -57,6 +73,14 @@
 			<div class="skill-card">
 				<span class="skill-icon">⚙️</span>
 				<div class="skill-name">Terraform</div>
+			</div>
+			<div class="skill-card">
+				<span class="skill-icon">🐍</span>
+				<div class="skill-name">Ansible</div>
+			</div>
+			<div class="skill-card">
+				<span class="skill-icon">📊</span>
+				<div class="skill-name">Prometheus</div>
 			</div>
 		</div>
 	</foreignObject>
