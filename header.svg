@@ -1,47 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
 	<defs>
 		<style>
-			.container { 
-				font-family: 'Courier New', monospace; 
-				font-size: 28px; 
-				fill: none; 
-				stroke: none; 
-			}
+			.container { font-family: 'Courier New', monospace; font-size: 28px; fill: none; stroke: none; }
 			.title {
-				font-size: 42px; 
-				font-weight: bold;
+				font-size: 42px; font-weight: bold;
 				background: linear-gradient(90deg, #00d4ff, #ff6b35, #f7931e, #00ff88);
 				background-size: 300% 100%;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				animation: gradient 3s ease infinite, typing 3.5s steps(30) infinite, blink 0.8s infinite;
 				border-right: 4px solid #00ff88;
-				white-space: nowrap; 
-				overflow: hidden; 
-				width: 0;
+				white-space: nowrap; overflow: hidden; width: 0;
 			}
-			.bio {
-				font-size: 20px; 
-				margin-top: 20px;
-				color: #e0e0e0; 
-				animation: fadeIn 2s ease-in 2.8s forwards;
-				opacity: 0;
-			}
-			.skills {
-				display: flex; 
-				gap: 12px; 
-				margin-top: 15px; 
-				font-size: 22px;
-				animation: slideIn 1.2s ease-out 3.8s forwards; 
-				opacity: 0; 
-				transform: translateX(-20px);
-			}
-			.skill-tag {
-				background: linear-gradient(45deg, rgba(0,212,255,0.2), rgba(255,107,53,0.2));
-				padding: 4px 12px;
-				border-radius: 20px;
-				border: 1px solid rgba(0,255,136,0.4);
-			}
+			.bio { font-size: 20px; margin-top: 20px; color: #e0e0e0; animation: fadeIn 2s ease-in 2.8s forwards; opacity: 0; }
+			.skills { display: flex; gap: 12px; margin-top: 15px; font-size: 22px; animation: slideIn 1.2s ease-out 3.8s forwards; opacity: 0; transform: translateX(-20px); }
+			.skill-tag { background: linear-gradient(45deg, rgba(0,212,255,0.2), rgba(255,107,53,0.2)); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0,255,136,0.4); }
 			@keyframes typing { from { width: 0; } to { width: 100%; } }
 			@keyframes blink { 0%, 50% { border-color: #00ff88; } 51%, 100% { border-color: transparent; } }
 			@keyframes gradient { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
