@@ -22,6 +22,15 @@
 
 [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sai-Emani25&layout=compact&theme=radical&hide_border=true&bg_color=0f0f2a&title_color=00ff88)](https://github.com/anuraghazra/github-readme-stats)
 
+### 🚀 **My Projects**
+
+| Project | Description | Type | Difficulty |
+|---------|-------------|------|------------|
+| [**Project Name 1**](https://github.com/Sai-Emani25/repo1) | Add a brief description of your project here. | ![](https://img.shields.io/badge/Open%20Source-10B981?style=flat-square) | ![](https://img.shields.io/badge/Easy-6EE7B7?style=flat-square) |
+| [**Project Name 2**](https://github.com/Sai-Emani25/repo2) | Add a brief description of your project here. | ![](https://img.shields.io/badge/Personal-3B82F6?style=flat-square) | ![](https://img.shields.io/badge/Medium-FBBF24?style=flat-square) |
+| [**Project Name 3**](https://github.com/Sai-Emani25/repo3) | Add a brief description of your project here. | ![](https://img.shields.io/badge/Open%20Source-10B981?style=flat-square) | ![](https://img.shields.io/badge/Hard-EF4444?style=flat-square) |
+| [**Project Name 4**](https://github.com/Sai-Emani25/repo4) | Add a brief description of your project here. | ![](https://img.shields.io/badge/Personal-3B82F6?style=flat-square) | ![](https://img.shields.io/badge/Expert-7F1D1D?style=flat-square) |
+
 ### 🔥 **Currently Working On**
 - 🔄 **AI-powered CI/CD pipelines**
 - ☸️ **Kubernetes cluster automation** 

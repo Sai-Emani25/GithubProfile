@@ -1,58 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280">
 	<defs>
 		<style>
-			.container { font-family: 'Courier New', monospace; font-size: 28px; fill: none; stroke: none; }
 			.title {
-				font-size: 44px; font-weight: bold;
-				background: linear-gradient(90deg, #00d4ff, #ff6b35, #f7931e, #00ff88, #ff00ff);
-				background-size: 300% 100%;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				animation: gradient 3s ease infinite, typing 4s steps(35) infinite, blink 0.8s infinite;
-				border-right: 4px solid #00ff88;
-				white-space: nowrap; overflow: hidden; width: 0;
+				font-family: 'Courier New', monospace;
+				font-size: 40px;
+				font-weight: bold;
+				fill: #00ff88;
+				animation: blink 0.8s infinite;
 			}
-			.bio { font-size: 22px; margin-top: 25px; color: #e0e0e0; animation: fadeIn 2s ease-in 3.5s forwards; opacity: 0; }
-			.skills { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; font-size: 22px; animation: slideIn 1.5s ease-out 4.5s forwards; opacity: 0; transform: translateX(-30px); }
-			.skill-tag { 
-				background: linear-gradient(45deg, rgba(0,212,255,0.2), rgba(255,107,53,0.2)); 
-				padding: 6px 14px; border-radius: 25px; border: 2px solid rgba(0,255,136,0.5); 
-				box-shadow: 0 4px 15px rgba(0,255,136,0.2);
-			}
-			@keyframes typing { from { width: 0; } to { width: 100%; } }
-			@keyframes blink { 0%, 50% { border-color: #00ff88; } 51%, 100% { border-color: transparent; } }
-			@keyframes gradient { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-			@keyframes fadeIn { to { opacity: 1; } }
-			@keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
-			@media (prefers-color-scheme: dark) { .bio { color: #c0c0c0; } }
+			.bio { font-family: 'Courier New', monospace; font-size: 20px; fill: #e0e0e0; }
+			.bio-highlight { fill: #00ff88; }
+			.skill-text { font-family: 'Courier New', monospace; font-size: 16px; fill: #e0e0e0; }
+			@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0.7; } }
+			@media (prefers-color-scheme: dark) { .bio { fill: #c0c0c0; } }
 		</style>
-	</defs>
-	<rect width="800" height="280" fill="url(#bgGrad)" rx="20"/>
-	<defs>
 		<linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
 			<stop offset="0%" stop-color="#0a0a23"/>
 			<stop offset="30%" stop-color="#1a1a3a"/>
 			<stop offset="70%" stop-color="#0f0f2a"/>
 			<stop offset="100%" stop-color="#0a0a23"/>
 		</linearGradient>
+		<linearGradient id="tagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="rgba(0,212,255,0.2)"/>
+			<stop offset="100%" stop-color="rgba(255,107,53,0.2)"/>
+		</linearGradient>
 	</defs>
-	<foreignObject x="40" y="70" width="720" height="220">
-		<div class="container">
-			<div class="title">Sai Emani 👨‍💻 | DevOps Engineer</div>
-			<div class="bio">
-				🔥 Building AI-integrated CI/CD Pipelines from Scratch<br>
-				📍 Bangalore, India | <a href="https://sai-emani25.github.io/Portfolio" style="color: #00ff88; text-decoration: none;">Portfolio</a>
-			</div>
-			<div class="skills">
-				<span class="skill-tag">🐳 Docker</span>
-				<span class="skill-tag">☸️ Kubernetes</span>
-				<span class="skill-tag">🔧 Jenkins</span>
-				<span class="skill-tag">🌐 AWS</span>
-				<span class="skill-tag">💻 Python</span>
-				<span class="skill-tag">⚙️ Terraform</span>
-				<span class="skill-tag">🐍 Ansible</span>
-				<span class="skill-tag">📊 Prometheus</span>
-			</div>
-		</div>
-	</foreignObject>
+	<rect width="800" height="280" fill="url(#bgGrad)" rx="20"/>
+	
+	<!-- Title -->
+	<text x="40" y="70" class="title">Sai Emani 👨‍💻 | DevOps Engineer</text>
+	
+	<!-- Bio -->
+	<text x="40" y="130" class="bio">🔥 Building AI-integrated CI/CD Pipelines from Scratch</text>
+	<text x="40" y="165" class="bio">📍 Bangalore, India | <tspan class="bio-highlight">Portfolio</tspan></text>
+	
+	<!-- Skills row 1 -->
+	<g transform="translate(40, 205)">
+		<rect x="0" y="0" width="115" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="15" y="22" class="skill-text">🐳 Docker</text>
+		
+		<rect x="125" y="0" width="160" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="140" y="22" class="skill-text">☸️ Kubernetes</text>
+		
+		<rect x="295" y="0" width="130" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="310" y="22" class="skill-text">🔧 Jenkins</text>
+		
+		<rect x="435" y="0" width="95" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="450" y="22" class="skill-text">🌐 AWS</text>
+	</g>
+	
+	<!-- Skills row 2 -->
+	<g transform="translate(40, 245)">
+		<rect x="0" y="0" width="120" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="15" y="22" class="skill-text">💻 Python</text>
+		
+		<rect x="130" y="0" width="140" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="145" y="22" class="skill-text">⚙️ Terraform</text>
+		
+		<rect x="280" y="0" width="130" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="295" y="22" class="skill-text">🐍 Ansible</text>
+		
+		<rect x="420" y="0" width="155" height="34" rx="17" fill="url(#tagGrad)" stroke="rgba(0,255,136,0.5)" stroke-width="2"/>
+		<text x="435" y="22" class="skill-text">📊 Prometheus</text>
+	</g>
 </svg>

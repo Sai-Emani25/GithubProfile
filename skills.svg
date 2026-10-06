@@ -1,87 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="800" height="160">
 	<defs>
 		<style>
-			.skill-grid { 
-				display: grid; 
-				grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
-				gap: 20px; 
-				padding: 25px; 
-				font-family: 'Segoe UI', sans-serif; 
-			}
-			.skill-card {
-				background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(255,107,53,0.15));
-				border: 2px solid rgba(0,255,136,0.4); 
-				border-radius: 16px; 
-				padding: 20px; 
-				text-align: center;
-				animation: float 4s ease-in-out infinite; 
-				cursor: pointer; 
-				transition: all 0.3s ease;
-			}
-			.skill-card:hover { 
-				transform: scale(1.05); 
-				border-color: #00ff88; 
-				box-shadow: 0 8px 25px rgba(0,255,136,0.4); 
-			}
-			.skill-icon { 
-				font-size: 36px; 
-				display: block; 
-				margin-bottom: 10px; 
-			}
-			.skill-name { 
-				font-size: 16px; 
-				font-weight: 700; 
-				color: #00ff88; 
-			}
+			.skill-name { font-family: 'Segoe UI', sans-serif; font-size: 16px; font-weight: 700; fill: #00ff88; text-anchor: middle; }
+			.skill-icon { font-size: 36px; text-anchor: middle; }
+			.skill-group { animation: float 4s ease-in-out infinite; transform-origin: center; cursor: pointer; }
+			.skill-group:hover { transform: scale(1.05); }
+			
 			@keyframes float {
 				0%, 100% { transform: translateY(0px); }
 				50% { transform: translateY(-10px); }
 			}
-			.skill-card:nth-child(1) { animation-delay: 0s; }
-			.skill-card:nth-child(2) { animation-delay: 0.4s; }
-			.skill-card:nth-child(3) { animation-delay: 0.8s; }
-			.skill-card:nth-child(4) { animation-delay: 1.2s; }
-			.skill-card:nth-child(5) { animation-delay: 1.6s; }
-			.skill-card:nth-child(6) { animation-delay: 2s; }
-			.skill-card:nth-child(7) { animation-delay: 2.4s; }
-			.skill-card:nth-child(8) { animation-delay: 2.8s; }
+			#sg1 { animation-delay: 0s; }
+			#sg2 { animation-delay: 0.4s; }
+			#sg3 { animation-delay: 0.8s; }
+			#sg4 { animation-delay: 1.2s; }
+			#sg5 { animation-delay: 1.6s; }
+			#sg6 { animation-delay: 2s; }
+			#sg7 { animation-delay: 2.4s; }
+			#sg8 { animation-delay: 2.8s; }
 		</style>
+		<linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" stop-color="rgba(0,212,255,0.15)"/>
+			<stop offset="100%" stop-color="rgba(255,107,53,0.15)"/>
+		</linearGradient>
 	</defs>
 	<rect width="800" height="160" fill="#0f0f2a" rx="20"/>
-	<foreignObject x="0" y="0" width="800" height="160">
-		<div class="skill-grid">
-			<div class="skill-card">
-				<span class="skill-icon">🐳</span>
-				<div class="skill-name">Docker</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">☸️</span>
-				<div class="skill-name">Kubernetes</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">🔧</span>
-				<div class="skill-name">Jenkins</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">🌐</span>
-				<div class="skill-name">AWS</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">💻</span>
-				<div class="skill-name">Python</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">⚙️</span>
-				<div class="skill-name">Terraform</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">🐍</span>
-				<div class="skill-name">Ansible</div>
-			</div>
-			<div class="skill-card">
-				<span class="skill-icon">📊</span>
-				<div class="skill-name">Prometheus</div>
-			</div>
-		</div>
-	</foreignObject>
+	
+	<!-- Row 1 -->
+	<g id="sg1" class="skill-group" transform="translate(30, 20)">
+		<rect x="0" y="0" width="130" height="110" rx="16" fill="url(#cardGrad)" stroke="rgba(0,255,136,0.4)" stroke-width="2"/>
+		<text x="65" y="45" class="skill-icon">🐳</text>
+		<text x="65" y="85" class="skill-name">Docker</text>
+	</g>
+	
+	<g id="sg2" class="skill-group" transform="translate(180, 20)">
+		<rect x="0" y="0" width="130" height="110" rx="16" fill="url(#cardGrad)" stroke="rgba(0,255,136,0.4)" stroke-width="2"/>
+		<text x="65" y="45" class="skill-icon">☸️</text>
+		<text x="65" y="85" class="skill-name">Kubernetes</text>
+	</g>
+	
+	<g id="sg3" class="skill-group" transform="translate(330, 20)">
+		<rect x="0" y="0" width="130" height="110" rx="16" fill="url(#cardGrad)" stroke="rgba(0,255,136,0.4)" stroke-width="2"/>
+		<text x="65" y="45" class="skill-icon">🔧</text>
+		<text x="65" y="85" class="skill-name">Jenkins</text>
+	</g>
+	
+	<g id="sg4" class="skill-group" transform="translate(480, 20)">
+		<rect x="0" y="0" width="130" height="110" rx="16" fill="url(#cardGrad)" stroke="rgba(0,255,136,0.4)" stroke-width="2"/>
+		<text x="65" y="45" class="skill-icon">🌐</text>
+		<text x="65" y="85" class="skill-name">AWS</text>
+	</g>
+	
+	<g id="sg5" class="skill-group" transform="translate(630, 20)">
+		<rect x="0" y="0" width="130" height="110" rx="16" fill="url(#cardGrad)" stroke="rgba(0,255,136,0.4)" stroke-width="2"/>
+		<text x="65" y="45" class="skill-icon">💻</text>
+		<text x="65" y="85" class="skill-name">Python</text>
+	</g>
 </svg>
